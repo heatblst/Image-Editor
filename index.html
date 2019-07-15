@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.4/cropper.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/0.8.1/cropper.min.js"></script>
+</head>
+<body>
+    <h1 class="name">Image Editor</h1>
+    <div class="result"></div>
+    <div class="img-result hide">
+        <img id="cropie" class="cropped" src="" alt="">
+    </div>
+
+    
+    <div class="box">
+        <div class="options hide">
+            <label> Width</label>
+            <input type="number" class="image-width" value="300" min="100" max="1000" />
+        </div>
+        <input type="file" id="loader"><br><br><br>
+        <button class="btn Crop" id="crop">Crop</button><br><br><br>
+        <button onclick="rotateBy90Deg(cropped)"id="rotate" class="btn rotate">Rotate</button><br><br><br>
+        <p>
+          <h1 id="gray" >GrayScale</h1>
+          <input id="grayscale" name="grayscale" type="range" min="0" max="10" onchange="gray"/>
+        </p>
+    </div>
+    <script src="main.js"></script>
+     </body>
+</html>
